@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "crc32.c"
+#include "crc32b.c"
 
 int main (int argc, char *argv[]){
     int size;
@@ -15,11 +15,13 @@ int main (int argc, char *argv[]){
     for (int i = 0; i < size; i++) {
         v[i] = random() % 100000;
     }
+    v[size-1] = '\0';
 
     // Run application
-    for (int i = 1; i < size; i++) {
-        crc_value = Crc32_ComputeBuf(crc_value, &v[i], sizeof(int));
-    }
+    // for (int i = 1; i < size; i++) {     // Older CRC implementation (with lookup table)
+        crc_value = crc32b(&v);
+        // printf("%d\n", crc_value);
+    // }
 
     return 0;
 
