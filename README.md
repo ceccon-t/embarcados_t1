@@ -28,3 +28,35 @@ unsigned int crc32b(unsigned char *message) {
    }
    return ~crc;
 }
+
+
+
+// C++ implementation of computation  of
+// arithmetic mean, geometric mean
+// and harmonic mean
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Function to calculate arithmetic
+// mean, geometric mean and harmonic mean
+double compute(int a, int b)
+{
+ 
+    double AM, GM, HM;
+ 
+    AM = (a + b) / 2;
+    GM = sqrt(a * b);
+    HM = (GM * GM) / AM;
+    return HM;
+}
+ 
+// Driver function
+int main()
+{
+ 
+    int a = 5, b = 15;
+    double HM = compute(a, b);
+    cout << "Harmonic Mean between " << a
+          << " and " << b << " is " << HM ;
+    return 0;
+}
