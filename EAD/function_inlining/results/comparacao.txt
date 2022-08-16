@@ -1,0 +1,24 @@
+Para 10x10:
+- Original:
+- - Tempo simulacao (em segundos): 0.000057
+- - Total de ciclos: 68455
+- Com otimização de function inlining:
+- - Tempo simulacao (em segundos): 0.000056
+- - Total de ciclos: 66643
+
+Para 100x100:
+- Original:
+- - Tempo simulacao (em segundos): 0.000401
+- - Total de ciclos: 481656
+- Com otimização de function inlining:
+- - Tempo simulacao (em segundos): 0.000286
+- - Total de ciclos: 343151
+
+Para 1000x100:
+- Original:
+- - Tempo simulacao (em segundos): 0.034821
+- - Total de ciclos: 41802085
+- Com otimização de function inlining:
+- - Tempo simulacao (em segundos): 0.023292
+- - Total de ciclos: 27961771
+
