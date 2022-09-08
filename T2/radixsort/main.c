@@ -16,13 +16,15 @@ int main (int argc, char *argv[]){
         v[i] = random() % 100000;
     }
 
-    // Run application
+    // Inicializa dependencias para medir consumo de energia
     rapl_init();  /* inicializar a lib do RAPL */
 	start_rapl_sysfs(); // Iniciar a contagem de consumo de energia
     clock_t t = clock(); // Iniciar a contagem de tempo
 
+    // Run application
         radix_sort_LSD(v, size); // O que sera medido
 
+    // Pega valores finais de energia e reporta consumo
     t = clock() - t; // Finalizar contagem do tempo
     double energy = end_rapl_sysfs();   // Finalizar a contagem dos contadores de energia
     double tempo = ((double)t)/CLOCKS_PER_SEC; // transforma tempo para segundos
