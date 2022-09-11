@@ -1,0 +1,127 @@
+===========================
+Valores com 2 dígitos (%100):
+
+Default (-O0)
+Tempo (segundos): 0.04527
+Energia (Joules): 0.84790
+
+Fast (-Ofast)
+Tempo (segundos): 0.01878
+Energia (Joules): 0.27399
+
+Size (-Os)
+Tempo (segundos): 0.02761
+Energia (Joules): 0.50757
+
+===========================
+===========================
+Valores com 3 dígitos (%1000):
+
+Default (-O0)
+Tempo (segundos): 0.05532
+Energia (Joules): 1.22625
+
+Fast (-Ofast)
+Tempo (segundos): 0.03013
+Energia (Joules): 0.61529
+
+Size (-Os)
+Tempo (segundos): 0.03753
+Energia (Joules): 0.74872
+
+
+===========================
+===========================
+Valores com 4 dígitos (%10000):
+
+Default (-O0)
+Tempo (segundos): 0.06490
+Energia (Joules): 1.37738
+
+Fast (-Ofast)
+Tempo (segundos): 0.03825
+Energia (Joules): 0.78723
+
+Size (-Os)
+Tempo (segundos): 0.05434
+Energia (Joules): 1.15533
+
+
+===========================
+===========================
+Valores com 5 dígitos (%100000):
+
+Default (-O0)
+Tempo (segundos): 0.07933
+Energia (Joules): 1.56006
+
+Fast (-Ofast)
+Tempo (segundos): 0.04635
+Energia (Joules): 1.01410
+
+Size (-Os)
+Tempo (segundos): 0.06551
+Energia (Joules): 1.34967
+
+
+===========================
+===========================
+Valores com 6 dígitos (%1000000):
+
+Default (-O0)
+Tempo (segundos): 0.13073
+Energia (Joules): 2.84704
+
+Fast (-Ofast)
+Tempo (segundos): 0.05416
+Energia (Joules): 1.13092
+
+Size (-Os)
+Tempo (segundos): 0.07318
+Energia (Joules): 1.48639
+
+
+===========================
+===========================
+Valores com 7 dígitos (%10000000):
+
+Default (-O0)
+Tempo (segundos): 0.13344
+Energia (Joules): 2.80639
+
+Fast (-Ofast)
+Tempo (segundos): 0.06293
+Energia (Joules): 1.29297
+
+Size (-Os)
+Tempo (segundos): 0.08173
+Energia (Joules): 1.49341
+
+
+===========================
+===========================
+Valores com 8 dígitos (%100000000):
+
+Default (-O0)
+Tempo (segundos): 0.17266 
+Energia (Joules): 3.18236
+
+Fast (-Ofast)
+Tempo (segundos): 0.07505
+Energia (Joules): 1.53887
+
+Size (-Os)
+Tempo (segundos): 0.09410
+Energia (Joules): 1.76794
+
+
+===========================
+===========================
+Tamanhos dos executáveis gerados:
+
+Default (-O0): 21,8 KiB
+Fast (-0fast): 23,3 KiB
+Size (-Os)   : 17,8 KiB
+
+
+===========================

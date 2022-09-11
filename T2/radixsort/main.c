@@ -13,7 +13,7 @@ int main (int argc, char *argv[]){
     int v[size];
 
     for (int i = 0; i < size; i++) {
-        v[i] = random() % 100000;
+        v[i] = random() % 100000000;
     }
 
     // Inicializa dependencias para medir consumo de energia
