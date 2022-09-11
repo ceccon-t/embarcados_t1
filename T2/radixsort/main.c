@@ -8,7 +8,7 @@ int main (int argc, char *argv[]){
     int size;
     srand(177542);
 
-    size = 600000;
+    size = 1000000;
 
     int v[size];
 

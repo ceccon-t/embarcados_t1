@@ -1,50 +1,118 @@
 ===========================
-Entrada tamanho 6000:
+Entrada tamanho 1000:
 
 Default (-O0)
-Tempo (segundos): 0.00047
-Energia (Joules): 0.01703
+Tempo (segundos): 0.00009
+Energia (Joules): 0.00617
 
 Fast (-Ofast)
-Tempo (segundos): 0.00029
-Energia (Joules): 0.01465
+Tempo (segundos): 0.00008
+Energia (Joules): 0.00421
 
 Size (-Os)
-Tempo (segundos): 0.00075
-Energia (Joules): 0.01703
+Tempo (segundos): 0.00021
+Energia (Joules): 0.01636
 
 ===========================
 ===========================
-Entrada tamanho 60000:
+Entrada tamanho 5000:
 
 Default (-O0)
-Tempo (segundos): 0.00497
-Energia (Joules): 0.07715
+Tempo (segundos): 0.00027
+Energia (Joules): 0.01642
 
 Fast (-Ofast)
-Tempo (segundos): 0.00227
-Energia (Joules): 0.03540
+Tempo (segundos): 0.00019
+Energia (Joules): 0.01440
 
 Size (-Os)
-Tempo (segundos): 0.00648
-Energia (Joules): 0.05640
+Tempo (segundos): 0.00040
+Energia (Joules): 0.04130
 
 
 ===========================
 ===========================
-Entrada tamanho 600000:
+Entrada tamanho 10000:
 
 Default (-O0)
-Tempo (segundos): 0.05274
-Energia (Joules): 1.12982
+Tempo (segundos): 0.00091
+Energia (Joules): 0.02971
 
 Fast (-Ofast)
-Tempo (segundos): 0.02647
-Energia (Joules): 0.55401
+Tempo (segundos): 0.00048
+Energia (Joules): 0.01526
 
 Size (-Os)
-Tempo (segundos): 0.03867
-Energia (Joules): 0.89288
+Tempo (segundos): 0.00084
+Energia (Joules): 0.02442
+
+
+===========================
+===========================
+Entrada tamanho 50000:
+
+Default (-O0)
+Tempo (segundos): 0.00423
+Energia (Joules): 0.09247
+
+Fast (-Ofast)
+Tempo (segundos): 0.00201
+Energia (Joules): 0.03888
+
+Size (-Os)
+Tempo (segundos): 0.00334
+Energia (Joules): 0.05225
+
+
+===========================
+===========================
+Entrada tamanho 100000:
+
+Default (-O0)
+Tempo (segundos): 0.00422
+Energia (Joules): 0.10065
+
+Fast (-Ofast)
+Tempo (segundos): 0.00225
+Energia (Joules): 0.03680
+
+Size (-Os)
+Tempo (segundos): 0.00291
+Energia (Joules): 0.04217
+
+
+===========================
+===========================
+Entrada tamanho 500000:
+
+Default (-O0)
+Tempo (segundos): 0.04498
+Energia (Joules): 1.01178
+
+Fast (-Ofast)
+Tempo (segundos): 0.02359
+Energia (Joules): 0.53137
+
+Size (-Os)
+Tempo (segundos): 0.03004
+Energia (Joules): 0.62488
+
+
+===========================
+===========================
+Entrada tamanho 1000000:
+
+Default (-O0)
+Tempo (segundos): 0.08445
+Energia (Joules): 1.66229
+
+Fast (-Ofast)
+Tempo (segundos): 0.04170
+Energia (Joules): 0.88147
+
+Size (-Os)
+Tempo (segundos): 0.06123
+Energia (Joules): 1.23931
 
 
 ===========================
