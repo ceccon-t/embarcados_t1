@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/active_fragment"
-            android:name="study.ceccon.battleshipexplorationsfirsttry.YourFleetFragment"/>
+            android:name="br.ufrgs.inf.embarcados.battleship.YourFleetFragment"/>
     </LinearLayout>
 
     <LinearLayout
