@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_your_fleet"
+        android:icon="@drawable/your_fleet_navigation_ico"
+        android:title="Your fleet"
+        />
+
+    <item android:id="@+id/nav_enemy_fleet"
+        android:icon="@drawable/their_fleet_navigation_ico"
+        android:title="Enemy fleet"
+        />
+
+</menu>

@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupFleetActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_setup_heading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Setup your fleet"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_setup_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="KEY_HERE" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/container_setup_main_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_setup_heading"
+        android:gravity="center"
+        android:padding="24dp"
+        >
+        <GridLayout
+            android:rowCount="8"
+            android:columnCount="8"
+            android:background="#3F51B5"
+            android:foregroundGravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <!-- Row 'A' / 0 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_A_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'B' / 1 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_B_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'C' / 2 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_C_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'D' / 3 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_D_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'E' / 4 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_E_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'F' / 5 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_F_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'G' / 6 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_G_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- Row 'H' / 7 -->
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+            <ImageView
+                android:id="@+id/iv_setup_cell_H_8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/water1"/>
+
+            <!-- END REPEATED IMAGES FOR GRID -->
+
+        </GridLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view_ship_choices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_setup_main_grid"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_setup_patrol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="24dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_header_setup_patrol"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Patrol (2 cells)"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="20sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_setup_patrol"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/dummypatrol"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_patrol"
+                    app:layout_constraintBottom_toBottomOf="@id/choice_rotation_setup_patrol"
+                    android:padding="8dp"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <Spinner
+                    android:id="@+id/choice_rotation_setup_patrol"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/image_setup_patrol"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_patrol"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Spinner
+                    android:id="@+id/choice_row_setup_patrol"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_setup_patrol"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Spinner
+                    android:id="@+id/choice_col_setup_patrol"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/choice_row_setup_patrol"
+                    app:layout_constraintTop_toBottomOf="@id/choice_rotation_setup_patrol"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Button
+                    android:id="@+id/button_set_setup_patrol"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Set"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/choice_col_setup_patrol"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_patrol"
+                    android:onClick="handleSetButtons"
+                    app:layout_constraintWidth_percent="0.2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_setup_destroyer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_setup_patrol">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_header_setup_destroyer"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Destroyer (3 cells)"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="20sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_setup_destroyer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/dummydestroyer"
+                    android:padding="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_destroyer"
+                    app:layout_constraintBottom_toBottomOf="@id/choice_rotation_setup_destroyer"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <Spinner
+                    android:id="@+id/choice_rotation_setup_destroyer"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/image_setup_destroyer"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_destroyer"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Spinner
+                    android:id="@+id/choice_row_setup_destroyer"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="A V"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_setup_destroyer"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Spinner
+                    android:id="@+id/choice_col_setup_destroyer"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1 V"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/choice_row_setup_destroyer"
+                    app:layout_constraintTop_toBottomOf="@id/choice_rotation_setup_destroyer"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Button
+                    android:id="@+id/button_set_setup_destroyer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Set"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/choice_col_setup_destroyer"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_destroyer"
+                    android:onClick="handleSetButtons"
+                    app:layout_constraintWidth_percent="0.2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_setup_battleship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_setup_destroyer">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_header_setup_battleship"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Battleship (4 cells)"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="20sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_setup_battleship"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/dummybattleship"
+                    android:padding="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_battleship"
+                    app:layout_constraintBottom_toBottomOf="@id/choice_rotation_setup_battleship"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <Spinner
+                    android:id="@+id/choice_rotation_setup_battleship"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Horizontal V"
+                    app:layout_constraintStart_toEndOf="@id/image_setup_battleship"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_battleship"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Spinner
+                    android:id="@+id/choice_row_setup_battleship"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="A V"
+                    app:layout_constraintTop_toBottomOf="@id/image_setup_battleship"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Spinner
+                    android:id="@+id/choice_col_setup_battleship"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1 V"
+                    app:layout_constraintTop_toBottomOf="@id/choice_rotation_setup_battleship"
+                    app:layout_constraintStart_toEndOf="@id/choice_row_setup_battleship"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Button
+                    android:id="@+id/button_set_setup_battleship"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Set"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/choice_col_setup_battleship"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_battleship"
+                    android:onClick="handleSetButtons"
+                    app:layout_constraintWidth_percent="0.2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_setup_carrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_setup_battleship">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_header_setup_carrier"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Carrier (5 cells)"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="20sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_setup_carrier"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/dummycarrier"
+                    android:padding="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_carrier"
+                    app:layout_constraintBottom_toBottomOf="@id/choice_rotation_setup_carrier"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <Spinner
+                    android:id="@+id/choice_rotation_setup_carrier"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Horizontal V"
+                    app:layout_constraintStart_toEndOf="@id/image_setup_carrier"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_carrier"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Spinner
+                    android:id="@+id/choice_row_setup_carrier"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="A V"
+                    app:layout_constraintTop_toBottomOf="@id/image_setup_carrier"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Spinner
+                    android:id="@+id/choice_col_setup_carrier"
+                    tools:listitem="@android:layout/simple_list_item_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1 V"
+                    app:layout_constraintTop_toBottomOf="@id/choice_rotation_setup_carrier"
+                    app:layout_constraintStart_toEndOf="@id/choice_row_setup_carrier"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <Button
+                    android:id="@+id/button_set_setup_carrier"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Set"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/choice_col_setup_carrier"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_header_setup_carrier"
+                    android:onClick="handleSetButtons"
+                    app:layout_constraintWidth_percent="0.2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/scroll_view_ship_choices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent="0.6"
+            android:text="BATTLE!"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="handleBattleButton"
+            android:id="@+id/button_setup_battle"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
