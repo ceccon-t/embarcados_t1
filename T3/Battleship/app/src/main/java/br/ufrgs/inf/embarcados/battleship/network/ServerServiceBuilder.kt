@@ -8,7 +8,7 @@ object ServerServiceBuilder {
     private val client = OkHttpClient.Builder().build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://10.0.0.122:8000/")
+        .baseUrl("https://embarcadosbattleshipserver.herokuapp.com/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()
