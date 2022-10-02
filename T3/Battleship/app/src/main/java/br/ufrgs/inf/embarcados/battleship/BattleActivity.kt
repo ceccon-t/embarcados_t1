@@ -32,6 +32,10 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
         val destroyerSerialized = intent.getStringExtra("Destroyer").toString()
         val battleshipSerialized = intent.getStringExtra("Battleship").toString()
         val carrierSerialized = intent.getStringExtra("Carrier").toString()
+        val enemyPatrolSerialized = intent.getStringExtra("EnemyPatrol").toString()
+        val enemyDestroyerSerialized = intent.getStringExtra("EnemyDestroyer").toString()
+        val enemyBattleshipSerialized = intent.getStringExtra("EnemyBattleship").toString()
+        val enemyCarrierSerialized = intent.getStringExtra("EnemyCarrier").toString()
 
         player = Player(Ship("Patrol", patrolSerialized),
             Ship("Destroyer", destroyerSerialized),
@@ -40,10 +44,10 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
         turn = 0
         isPlayerTurn = true
 
-        enemy = Player(Ship("Patrol", patrolSerialized),
-            Ship("Destroyer", destroyerSerialized),
-            Ship("Battleship", battleshipSerialized),
-            Ship("Carrier", carrierSerialized))
+        enemy = Player(Ship("Patrol", enemyPatrolSerialized),
+            Ship("Destroyer", enemyDestroyerSerialized),
+            Ship("Battleship", enemyBattleshipSerialized),
+            Ship("Carrier", enemyCarrierSerialized))
 
         binding.bottomNavigationMenu.setOnItemSelectedListener(this)
 

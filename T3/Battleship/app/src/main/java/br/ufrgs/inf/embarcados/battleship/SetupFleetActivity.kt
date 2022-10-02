@@ -8,15 +8,25 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.Toast
 import br.ufrgs.inf.embarcados.battleship.databinding.ActivitySetupFleetBinding
+import br.ufrgs.inf.embarcados.battleship.network.ServerServiceBuilder
+import br.ufrgs.inf.embarcados.battleship.network.setup.SetupRequestInterface
+import br.ufrgs.inf.embarcados.battleship.network.setup.SetupRequestModel
+import br.ufrgs.inf.embarcados.battleship.network.setup.SetupResponseModel
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SetupFleetActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySetupFleetBinding
     private lateinit var fleetSetupBoard: FleetBoard
+    private var yourId = ""
+    private var sessionKey = ""
     private var patrolSerialized = ""
     private var destroyerSerialized = ""
     private var battleshipSerialized = ""
     private var carrierSerialized = ""
+    private var enemyConfirmationAttempts = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +35,10 @@ class SetupFleetActivity : AppCompatActivity() {
 
         fleetSetupBoard = FleetBoard()
 
-        val sessionKey = intent.getStringExtra("Key")
-        binding.textViewSetupKey.text = sessionKey
+        sessionKey = intent.getStringExtra("Key").toString()
+        yourId = intent.getStringExtra("YourId").toString()
+
+        binding.textViewSetupKey.text = sessionKey + " - " + yourId
 
         setupSpinners();
 
@@ -63,7 +75,6 @@ class SetupFleetActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Ship does not fit, please check (needs $size free cells).", Toast.LENGTH_SHORT).show()
                 }
-//                binding.buttonSetSetupPatrol.isEnabled = false
             }
             binding.buttonSetSetupDestroyer.id -> {
                 coord = binding.choiceRowSetupDestroyer.selectedItem as String + binding.choiceColSetupDestroyer.selectedItem as String
@@ -130,7 +141,6 @@ class SetupFleetActivity : AppCompatActivity() {
             }
         }
 
-//        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     public fun handleBattleButton(v: View) {
@@ -142,13 +152,78 @@ class SetupFleetActivity : AppCompatActivity() {
             return
         }
 
-        val intent = Intent(this, BattleActivity::class.java)
-        intent.putExtra("Patrol", patrolSerialized)
-        intent.putExtra("Destroyer", destroyerSerialized)
-        intent.putExtra("Battleship", battleshipSerialized)
-        intent.putExtra("Carrier", carrierSerialized)
-        startActivity(intent)
+        informSetupToServer();
+    }
 
+    private fun informSetupToServer() {
+        val requestModel = SetupRequestModel(sessionKey, yourId, patrolSerialized, destroyerSerialized, battleshipSerialized, carrierSerialized)
+        val response = ServerServiceBuilder.buildService(SetupRequestInterface::class.java)
+        response.sendRequest(requestModel).enqueue(
+            object: Callback<SetupResponseModel> {
+                override fun onResponse(
+                    call: Call<SetupResponseModel>,
+                    response: Response<SetupResponseModel>
+                ) {
+                    binding.buttonSetupBattle.text = "Connecting..."
+                    binding.buttonSetupBattle.isEnabled = false
+                    handleServerSetupResponse(response.body()!!)
+                }
+
+                override fun onFailure(call: Call<SetupResponseModel>, t: Throwable) {
+                    Toast.makeText(this@SetupFleetActivity, "Could not connect to server, try again later", Toast.LENGTH_LONG).show()
+                    binding.buttonSetupBattle.text = "BATTLE!"
+                    binding.buttonSetupBattle.isEnabled = true
+                }
+            }
+        )
+    }
+
+    private fun handleServerSetupResponse(serverResponse: SetupResponseModel) {
+        if (serverResponse.player1.equals("READY") && serverResponse.player2.equals("READY")) {
+            var enemyPatrolSerialized: String = ""
+            var enemyDestroyerSerialized: String = ""
+            var enemyBattleshipSerialized: String = ""
+            var enemyCarrierSerialized: String = ""
+
+            if (yourId.equals("player1")) {
+                enemyPatrolSerialized = serverResponse.playerTwoPatrol
+                enemyDestroyerSerialized = serverResponse.playerTwoDestroyer
+                enemyBattleshipSerialized = serverResponse.playerTwoBattleship
+                enemyCarrierSerialized = serverResponse.playerTwoCarrier
+            } else {
+                enemyPatrolSerialized = serverResponse.playerOnePatrol
+                enemyDestroyerSerialized = serverResponse.playerOneDestroyer
+                enemyBattleshipSerialized = serverResponse.playerOneBattleship
+                enemyCarrierSerialized = serverResponse.playerOneCarrier
+            }
+
+            val intent = Intent(this, BattleActivity::class.java)
+            intent.putExtra("Key", sessionKey)
+            intent.putExtra("YourId", yourId)
+            intent.putExtra("Patrol", patrolSerialized)
+            intent.putExtra("Destroyer", destroyerSerialized)
+            intent.putExtra("Battleship", battleshipSerialized)
+            intent.putExtra("Carrier", carrierSerialized)
+            intent.putExtra("EnemyPatrol", enemyPatrolSerialized)
+            intent.putExtra("EnemyDestroyer", enemyDestroyerSerialized)
+            intent.putExtra("EnemyBattleship", enemyBattleshipSerialized)
+            intent.putExtra("EnemyCarrier", enemyCarrierSerialized)
+
+
+            startActivity(intent)
+        } else {
+            if (enemyConfirmationAttempts < 10) {
+                enemyConfirmationAttempts += 1
+                Thread.sleep(3_000)
+                informSetupToServer()
+            } else {
+                enemyConfirmationAttempts += 1
+                Toast.makeText(this@SetupFleetActivity, "Enemy is taking too long to setup, try again later", Toast.LENGTH_LONG).show()
+                enemyConfirmationAttempts = 0
+                binding.buttonSetupBattle.text = "BATTLE!"
+                binding.buttonSetupBattle.isEnabled = true
+            }
+        }
     }
 
     private fun setupSpinners() {
