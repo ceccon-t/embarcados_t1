@@ -1,4 +1,4 @@
-package br.ufrgs.inf.embarcados.battleship
+package br.ufrgs.inf.embarcados.battleship.network.session
 
 import retrofit2.Call
 import retrofit2.http.Body

@@ -1,10 +1,13 @@
 package br.ufrgs.inf.embarcados.battleship
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import br.ufrgs.inf.embarcados.battleship.databinding.ActivityMainBinding
+import br.ufrgs.inf.embarcados.battleship.network.ServerServiceBuilder
+import br.ufrgs.inf.embarcados.battleship.network.session.SessionRequestInterface
+import br.ufrgs.inf.embarcados.battleship.network.session.SessionRequestModel
+import br.ufrgs.inf.embarcados.battleship.network.session.SessionResponseModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

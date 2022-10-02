@@ -1,4 +1,4 @@
-package br.ufrgs.inf.embarcados.battleship
+package br.ufrgs.inf.embarcados.battleship.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
