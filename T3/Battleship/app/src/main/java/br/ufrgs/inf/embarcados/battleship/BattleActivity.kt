@@ -8,25 +8,44 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import br.ufrgs.inf.embarcados.battleship.databinding.ActivityBattleBinding
+import br.ufrgs.inf.embarcados.battleship.network.ServerServiceBuilder
+import br.ufrgs.inf.embarcados.battleship.network.match.MatchRequestInterface
+import br.ufrgs.inf.embarcados.battleship.network.match.MatchRequestModel
+import br.ufrgs.inf.embarcados.battleship.network.match.MatchResponseModel
 import com.google.android.material.navigation.NavigationBarView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.util.*
+import kotlin.concurrent.schedule
 
 class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
 
     private lateinit var binding: ActivityBattleBinding
     private lateinit var your_fleet_fragment: YourFleetFragment
     private lateinit var enemy_fleet_fragment: EnemyFleetFragment
+    private lateinit var currentFragment: Fragment
+
+    private var sessionKey = ""
+    private var yourId = ""
 
     private var isPlaying: Boolean = true
     private var turn: Int = 0
+    private var myLastAction: String = ""
     private var isPlayerTurn: Boolean = true
     private lateinit var player: Player
     private var playerBoard: FleetBoard = FleetBoard()
     private lateinit var enemy: Player
 
+    private var enemyWaitTimer = Timer()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBattleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sessionKey = intent.getStringExtra("Key").toString()
+        yourId = intent.getStringExtra("YourId").toString()
 
         val patrolSerialized = intent.getStringExtra("Patrol").toString()
         val destroyerSerialized = intent.getStringExtra("Destroyer").toString()
@@ -42,7 +61,10 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
             Ship("Battleship", battleshipSerialized),
             Ship("Carrier", carrierSerialized))
         turn = 0
-        isPlayerTurn = true
+        isPlayerTurn = yourId.equals("player1")
+        if (!isPlayerTurn) {
+            setEnemyTurn()
+        }
 
         enemy = Player(Ship("Patrol", enemyPatrolSerialized),
             Ship("Destroyer", enemyDestroyerSerialized),
@@ -83,10 +105,10 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
             Toast.makeText(this, "Firing at cell $cellChosen.", Toast.LENGTH_SHORT).show()
             handlePlayerAction(cellChosen)
         }
-        else {
-            Toast.makeText(this, "Enemy firing at cell $cellChosen.", Toast.LENGTH_SHORT).show()
-            handleEnemyAction(cellChosen)
-        }
+//        else {
+//            Toast.makeText(this, "Enemy firing at cell $cellChosen.", Toast.LENGTH_SHORT).show()
+//            handleEnemyAction(cellChosen)
+//        }
     }
 
     private fun handlePlayerAction(cell: String) {
@@ -101,11 +123,11 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
 
         if (hit) {
             enemy_fleet_fragment.addHit(cell)
-            enemy_fleet_fragment.drawHits()
         } else {
             enemy_fleet_fragment.addMiss(cell)
-            enemy_fleet_fragment.drawMisses()
         }
+
+        myLastAction = cell
         advanceTurn()
     }
 
@@ -131,6 +153,12 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
 
     private fun advanceTurn() {
 
+        if (currentFragment == your_fleet_fragment) {
+            your_fleet_fragment.drawUiVariableElements()
+        } else {
+            enemy_fleet_fragment.drawUiVariableElements()
+        }
+
         if (player.hasLost()) {
             binding.textViewGameStatus.text = "You LOST"
             isPlaying = false
@@ -139,20 +167,69 @@ class BattleActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedList
         if (enemy.hasLost()) {
             binding.textViewGameStatus.text = "You WON"
             isPlaying = false
+            turn += 1
+            waitForEnemyAction()
             return
         }
 
-        if (isPlayerTurn) {
-            binding.textViewGameStatus.text = "Waiting enemy action"
-            isPlayerTurn = false
-        } else {
-            binding.textViewGameStatus.text = "YOUR turn"
-            isPlayerTurn = true
-        }
         turn += 1
+        if (isPlayerTurn) {
+            setEnemyTurn()
+        } else {
+            setPlayerTurn()
+        }
+    }
+
+    private fun setEnemyTurn() {
+        binding.textViewGameStatus.text = "Waiting enemy action"
+        isPlayerTurn = false
+        waitForEnemyAction()
+    }
+
+    private fun setPlayerTurn() {
+        binding.textViewGameStatus.text = "YOUR turn"
+        isPlayerTurn = true
+    }
+
+    private fun waitForEnemyAction() {
+        runOnUiThread {
+
+            val requestModel = MatchRequestModel(sessionKey, yourId, turn, myLastAction)
+            val response = ServerServiceBuilder.buildService(MatchRequestInterface::class.java)
+            response.sendRequest(requestModel).enqueue(
+                object: Callback<MatchResponseModel> {
+                    override fun onResponse(
+                        call: Call<MatchResponseModel>,
+                        response: Response<MatchResponseModel>
+                    ) {
+                        handleServerMatchResponse(response.body()!!)
+                    }
+
+                    override fun onFailure(call: Call<MatchResponseModel>, t: Throwable) {
+                        Toast.makeText(this@BattleActivity, "Having trouble to connect with server, trying again...", Toast.LENGTH_SHORT).show()
+                        enemyWaitTimer.schedule(10_000) {
+                            waitForEnemyAction()
+                        }
+                    }
+                }
+            )
+        }
+    }
+
+    private fun handleServerMatchResponse(serverResponse: MatchResponseModel) {
+        if (!isPlaying) return
+        if (serverResponse.lastActor.equals(yourId))  {
+//            Toast.makeText(this, "Waiting...", Toast.LENGTH_SHORT).show()
+            enemyWaitTimer.schedule(10_000) {
+                waitForEnemyAction()
+            }
+        } else {
+            handleEnemyAction(serverResponse.lastAction)
+        }
     }
 
     private fun setActiveFragment(f: Fragment) {
+        currentFragment = f
         supportFragmentManager.commit {
             replace(R.id.active_fragment, f)
         }

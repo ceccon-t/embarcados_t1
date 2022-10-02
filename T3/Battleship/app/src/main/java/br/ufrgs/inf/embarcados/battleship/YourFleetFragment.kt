@@ -36,10 +36,7 @@ class YourFleetFragment : Fragment() {
 //        binding.dummyYourFleetFragmentTextView.text = "Ships positions: \nPatrol: $patrol \nDestroyer: $destroyer \nBattleship: $battleship \nCarrier: $carrier \nHits: $hits \nMisses: $misses"
 //        setDummyText(dummyText)
 
-        drawShips()
-        drawEnemyActions()
-        drawLastEnemyActionIndicator()
-        drawHealthIndicators()
+        drawUiVariableElements()
         return binding.root
     }
 
@@ -96,12 +93,18 @@ class YourFleetFragment : Fragment() {
             "Carrier" -> setIsYourCarrierDead(isDead)
             else -> {}
         }
-        drawHealthIndicators()
     }
 
     public fun setLastEnemyAction(cell: String, result: String) {
         lastEnemyActionCell = cell
         lastEnemyActionResult = result
+    }
+
+    public fun drawUiVariableElements() {
+        drawShips()
+        drawEnemyActions()
+        drawLastEnemyActionIndicator()
+        drawHealthIndicators()
     }
 
     private fun drawShips() {

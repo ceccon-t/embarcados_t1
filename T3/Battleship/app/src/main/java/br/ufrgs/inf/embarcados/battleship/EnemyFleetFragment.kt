@@ -29,9 +29,7 @@ class EnemyFleetFragment : Fragment() {
         binding = FragmentEnemyFleetBinding.inflate(inflater, container, false)
 //        binding.dummyEnemyFleetFragmentTextView.text = "Hits: $hits \nMisses: $misses"
 
-        drawHits()
-        drawMisses()
-        drawHealthIndicators()
+        drawUiVariableElements()
         setupSpinners()
         return binding.root
     }
@@ -68,7 +66,6 @@ class EnemyFleetFragment : Fragment() {
             "Carrier" -> setIsEnemyCarrierDead(isDead)
             else -> {}
         }
-        drawHealthIndicators()
     }
 
     public fun getNextActionChoice(): String {
@@ -77,16 +74,22 @@ class EnemyFleetFragment : Fragment() {
         return row + column
     }
 
-    public fun drawHits() {
+    private fun drawHits() {
         for (cell in hits) {
             cellToView(cell).setImageResource(R.drawable.dummyexplosion)
         }
     }
 
-    public fun drawMisses() {
+    private fun drawMisses() {
         for (cell in misses) {
             cellToView(cell).setImageResource(R.drawable.dummymiss)
         }
+    }
+
+    public fun drawUiVariableElements() {
+        drawHits()
+        drawMisses()
+        drawHealthIndicators()
     }
 
     private fun drawHealthIndicators() {
