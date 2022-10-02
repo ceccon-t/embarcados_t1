@@ -65,7 +65,7 @@ class SetupFleetActivity : AppCompatActivity() {
                         fleetSetupBoard.reservePath(path)
                         for (cell in path) {
                             var iv = cellToView(cell)
-                            iv.setImageResource(R.drawable.dummypatrol)
+                            iv.setImageResource(R.drawable.bw_patrol)
                         }
                         patrolSerialized = path.joinToString(",")
                         binding.buttonSetSetupPatrol.isEnabled = false
@@ -86,7 +86,7 @@ class SetupFleetActivity : AppCompatActivity() {
                         fleetSetupBoard.reservePath(path)
                         for (cell in path) {
                             var iv = cellToView(cell)
-                            iv.setImageResource(R.drawable.dummydestroyer)
+                            iv.setImageResource(R.drawable.bw_destroyer)
                         }
                         destroyerSerialized = path.joinToString(",")
                         binding.buttonSetSetupDestroyer.isEnabled = false
@@ -107,7 +107,7 @@ class SetupFleetActivity : AppCompatActivity() {
                         fleetSetupBoard.reservePath(path)
                         for (cell in path) {
                             var iv = cellToView(cell)
-                            iv.setImageResource(R.drawable.dummybattleship)
+                            iv.setImageResource(R.drawable.bw_battleship)
                         }
                         battleshipSerialized = path.joinToString(",")
                         binding.buttonSetSetupBattleship.isEnabled = false
@@ -128,7 +128,7 @@ class SetupFleetActivity : AppCompatActivity() {
                         fleetSetupBoard.reservePath(path)
                         for (cell in path) {
                             var iv = cellToView(cell)
-                            iv.setImageResource(R.drawable.dummycarrier)
+                            iv.setImageResource(R.drawable.bw_carrier)
                         }
                         carrierSerialized = path.joinToString(",")
                         binding.buttonSetSetupCarrier.isEnabled = false

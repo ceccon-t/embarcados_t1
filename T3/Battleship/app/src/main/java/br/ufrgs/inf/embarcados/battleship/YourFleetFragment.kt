@@ -109,16 +109,16 @@ class YourFleetFragment : Fragment() {
 
     private fun drawShips() {
         for (cell in patrol.split(",")) {
-            cellToView(cell).setImageResource(R.drawable.dummypatrol)
+            cellToView(cell).setImageResource(R.drawable.bw_patrol)
         }
         for (cell in destroyer.split(",")) {
-            cellToView(cell).setImageResource(R.drawable.dummydestroyer)
+            cellToView(cell).setImageResource(R.drawable.bw_destroyer)
         }
         for (cell in battleship.split(",")) {
-            cellToView(cell).setImageResource(R.drawable.dummybattleship)
+            cellToView(cell).setImageResource(R.drawable.bw_battleship)
         }
         for (cell in carrier.split(",")) {
-            cellToView(cell).setImageResource(R.drawable.dummycarrier)
+            cellToView(cell).setImageResource(R.drawable.bw_carrier)
         }
     }
 

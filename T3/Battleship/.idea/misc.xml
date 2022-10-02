@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_battle.xml" value="0.1675925925925926" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_setup_fleet.xml" value="0.1675925925925926" />
-        <entry key="app/src/main/res/layout/fragment_enemy_fleet.xml" value="0.1675925925925926" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_setup_fleet.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_enemy_fleet.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_your_fleet.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.1675925925925926" />
       </map>
     </option>

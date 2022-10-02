@@ -18,7 +18,7 @@
         <GridLayout
             android:rowCount="8"
             android:columnCount="8"
-            android:background="#3F51B5"
+            android:background="@drawable/water1"
             android:foregroundGravity="center"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_2"
@@ -38,7 +38,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_3"
@@ -46,7 +46,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_4"
@@ -54,7 +54,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_5"
@@ -62,7 +62,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_6"
@@ -70,7 +70,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_7"
@@ -78,7 +78,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_A_8"
@@ -86,7 +86,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'B' / 1 -->
@@ -96,7 +96,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_2"
@@ -104,7 +104,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_3"
@@ -112,7 +112,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_4"
@@ -120,7 +120,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_5"
@@ -128,7 +128,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_6"
@@ -136,7 +136,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_7"
@@ -144,7 +144,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_B_8"
@@ -152,7 +152,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'C' / 2 -->
@@ -162,7 +162,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_2"
@@ -170,7 +170,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_3"
@@ -178,7 +178,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_4"
@@ -186,7 +186,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_5"
@@ -194,7 +194,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_6"
@@ -202,7 +202,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_7"
@@ -210,7 +210,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_C_8"
@@ -218,7 +218,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'D' / 3 -->
@@ -228,7 +228,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_2"
@@ -236,7 +236,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_3"
@@ -244,7 +244,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_4"
@@ -252,7 +252,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_5"
@@ -260,7 +260,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_6"
@@ -268,7 +268,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_7"
@@ -276,7 +276,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_D_8"
@@ -284,7 +284,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'E' / 4 -->
@@ -294,7 +294,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_2"
@@ -302,7 +302,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_3"
@@ -310,7 +310,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_4"
@@ -318,7 +318,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_5"
@@ -326,7 +326,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_6"
@@ -334,7 +334,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_7"
@@ -342,7 +342,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_E_8"
@@ -350,7 +350,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'F' / 5 -->
@@ -360,7 +360,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_2"
@@ -368,7 +368,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_3"
@@ -376,7 +376,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_4"
@@ -384,7 +384,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_5"
@@ -392,7 +392,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_6"
@@ -400,7 +400,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_7"
@@ -408,7 +408,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_F_8"
@@ -416,7 +416,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'G' / 6 -->
@@ -426,7 +426,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_2"
@@ -434,7 +434,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_3"
@@ -442,7 +442,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_4"
@@ -450,7 +450,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_5"
@@ -458,7 +458,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_6"
@@ -466,7 +466,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_7"
@@ -474,7 +474,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_G_8"
@@ -482,7 +482,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- Row 'H' / 7 -->
@@ -492,7 +492,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_2"
@@ -500,7 +500,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_3"
@@ -508,7 +508,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_4"
@@ -516,7 +516,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_5"
@@ -524,7 +524,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_6"
@@ -532,7 +532,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_7"
@@ -540,7 +540,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
             <ImageView
                 android:id="@+id/iv_player_cell_H_8"
@@ -548,7 +548,7 @@
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/water1"/>
 
             <!-- END REPEATED IMAGES FOR GRID -->
@@ -577,7 +577,7 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@drawable/dummypatrol"
+                android:src="@drawable/nb_patrol"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -599,7 +599,7 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@drawable/dummydestroyer"
+                android:src="@drawable/nb_destroyer"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -621,7 +621,7 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@drawable/dummybattleship"
+                android:src="@drawable/nb_battleship"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -643,7 +643,7 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:src="@drawable/dummycarrier"
+                android:src="@drawable/nb_carrier"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
